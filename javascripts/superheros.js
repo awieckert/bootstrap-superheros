@@ -8,9 +8,19 @@ const printToDom = (stringToPrint, divID) => {
 }
 
 const buildDomString = (superheroArray) => {
-    stringToPrint = "";
+    let stringToPrint = "";
     superheroArray.forEach((item) => {
-        stringToPrint += `<h1>${item.name}</h1>`;
+        // stringToPrint += `<h3>${item.name}</h3>`;
+        stringToPrint += `<div class="col-md-3">`;
+        stringToPrint += `<div class="panel">`;
+        stringToPrint +=   `<div class="panel-heading">`;
+        stringToPrint +=    `<h3 class="panel-title">${item.name}</h3>`;
+        stringToPrint +=   `</div>`;
+        stringToPrint +=   `<div class="panel-body"><img class="charImage" src="${item.image}">`;
+        stringToPrint += `<p class="charDescription">${item.description}</p>`;
+        stringToPrint += `</div>`;
+        stringToPrint += `</div>`;
+        stringToPrint += `</div>`;
     });
     printToDom(stringToPrint, "hero-container");
 }
