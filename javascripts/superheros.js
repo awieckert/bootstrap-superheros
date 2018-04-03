@@ -16,7 +16,11 @@ const buildDomString = (superheroArray) => {
         stringToPrint +=   `<div class="panel-heading">`;
         stringToPrint +=    `<h3 class="panel-title">${item.name}</h3>`;
         stringToPrint +=   `</div>`;
-        stringToPrint +=   `<div class="panel-body"><img class="charImage" src="${item.image}">`;
+        if(item.gender == "Male"){
+            stringToPrint +=   `<div class="panel-body"><img class="charImage maleCharImage" src="${item.image}">`;
+        } else {
+            stringToPrint +=   `<div class="panel-body"><img class="charImage femaleCharImage" src="${item.image}">`;
+        } 
         stringToPrint += `<p class="charDescription">${item.description}</p>`;
         stringToPrint += `</div>`;
         stringToPrint += `</div>`;
