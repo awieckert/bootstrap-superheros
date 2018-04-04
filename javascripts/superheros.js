@@ -10,7 +10,6 @@ const printToDom = (stringToPrint, divID) => {
 const buildDomString = (superheroArray) => {
     let stringToPrint = "";
     superheroArray.forEach((item) => {
-        // stringToPrint += `<h3>${item.name}</h3>`;
         stringToPrint += `<div class="col-md-3">`;
         stringToPrint += `<div class="panel">`;
         stringToPrint +=   `<div class="panel-heading">`;
